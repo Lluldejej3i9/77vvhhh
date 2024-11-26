@@ -1,0 +1,1515 @@
+wait(3)game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "You were ranked for",
+  Text = "Brook Admin!",
+  Duration = 5
+})
+
+-- ID do áudio (substitua pelo ID do áudio que você deseja)
+local audioId = "rbxassetid://2865227271"  -- Substitua pelo seu ID real
+
+-- Função para tocar o som no servidor
+local function tocarSom()
+    -- Cria um objeto de som dentro do Workspace
+    local som = Instance.new("Sound")
+    som.SoundId = audioId
+    som.Parent = game.Workspace  -- Você pode colocar isso em outro lugar, como um objeto específico
+
+    -- Toca o som
+    som:Play()
+
+    -- Opcional: esperar o som terminar e então limpar
+    som.Ended:Connect(function()
+        som:Destroy()
+    end)
+end
+
+-- Chama a função para tocar o som
+tocarSom()
+
+wait(3)game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "Script made by Prodon999",
+  Text = "@ReiDosRp",
+  Duration = 5
+})
+
+function Chat(message)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message , "All")
+end
+
+Rizz_Lines = loadstring(game:HttpGet("https://pastebin.com/raw/Tu3MY3Dx"))()
+
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/mikhailramlal/Rizzer/main/ui"))()
+
+local Rizz_Main = lib:Window("Main")
+
+local Rizz_Map = lib:Window("Scripts")
+
+local Rizz_Tab = lib:Window("Scripts")
+
+local Rizz_Hello = lib:Window("More")
+
+Rizz_Main:Label("FE Play Music")
+
+
+
+Rizz_Main:Button("FE Scare All Players" , function() 
+local args = {
+    [1] = "RolePlayName",
+    [2] = ""
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
+local currentTarget = nil
+
+
+local function changeTarget()
+    local others = {}
+    
+    
+    for _, p in pairs(Players:GetPlayers()) do
+        if p ~= player then
+            table.insert(others, p)
+        end
+    end
+    
+    
+    if #others > 0 then
+        currentTarget = others[math.random(1, #others)]
+        camera.CameraSubject = currentTarget.Character:FindFirstChild("Humanoid")
+    end
+end
+
+
+Players.PlayerRemoving:Connect(function(leavingPlayer)
+    if leavingPlayer == currentTarget then
+        changeTarget()  
+    end
+end)
+
+
+player.CharacterAdded:Connect(function(character)
+    
+    camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+    currentTarget = nil  
+end)
+
+
+changeTarget()
+
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "5710016194"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function teleportToPlayers()
+    for _, targetPlayer in pairs(game.Players:GetPlayers()) do
+        if targetPlayer ~= player then
+            local targetCharacter = targetPlayer.Character
+            if targetCharacter and targetCharacter:FindFirstChild("HumanoidRootPart") then
+                character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame)
+                wait(0.4) 
+            end
+        end
+    end
+end
+
+teleportToPlayers()
+
+
+
+
+
+
+
+
+
+
+
+
+local args = {
+    [1] = "OCA"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+if character then
+    character:BreakJoints()
+end
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6573930519"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))    
+
+-- Defina as coordenadas desejadas
+local destino = Vector3.new(432.58, -76.65, 97.99)  -- Altere os valores conforme necessário
+
+-- Função para teletransportar o personagem
+local function teleportarPersonagem()
+    local jogador = game.Players.LocalPlayer  -- Obtém o jogador que está executando o script
+    
+    -- Verifica se o jogador está na partida
+    if jogador and jogador.Character then
+        local personagem = jogador.Character
+        local humanoide = personagem:FindFirstChild("Humanoid")
+        
+        if humanoide then
+            -- Teleporta o personagem para as coordenadas especificadas
+            personagem:SetPrimaryPartCFrame(CFrame.new(destino))
+        end
+    end
+end
+
+-- Chama a função de teleporte
+teleportarPersonagem()    
+end)
+Rizz_Main:Button("Glitch Sound" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6038037533"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Main:Button("Siren Sound" , function() 
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6525690145"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Main:Button("Scream" , function() 
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "5710016194"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Main:Label("Others")
+
+Rizz_Main:Button("FE Big Head" , function()
+local args = {
+    [1] = "wear",
+    [2] = 14124336244
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Main:Button("FE Bring Unanchored Bricks" , function()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+local Workspace = game:GetService("Workspace")
+
+local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local Folder = Instance.new("Folder", Workspace)
+local Part = Instance.new("Part", Folder)
+local Attachment1 = Instance.new("Attachment", Part)
+Part.Anchored = true
+Part.CanCollide = false
+Part.Transparency = 1
+
+if not getgenv().Network then
+    getgenv().Network = {
+        BaseParts = {},
+        Velocity = Vector3.new(14.46262424, 14.46262424, 14.46262424)
+    }
+
+    Network.RetainPart = function(Part)
+        if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(Workspace) then
+            table.insert(Network.BaseParts, Part)
+            Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+            Part.CanCollide = false
+        end
+    end
+
+    local function EnablePartControl()
+        LocalPlayer.ReplicationFocus = Workspace
+        RunService.Heartbeat:Connect(function()
+            sethiddenproperty(LocalPlayer, "SimulationRadius", math.huge)
+            for _, Part in pairs(Network.BaseParts) do
+                if Part:IsDescendantOf(Workspace) then
+                    Part.Velocity = Network.Velocity
+                end
+            end
+        end)
+    end
+
+    EnablePartControl()
+end
+
+local function ForcePart(v)
+    if v:IsA("Part") and not v.Anchored and not v.Parent:FindFirstChild("Humanoid") and not v.Parent:FindFirstChild("Head") and v.Name ~= "Handle" then
+        for _, x in next, v:GetChildren() do
+            if x:IsA("BodyAngularVelocity") or x:IsA("BodyForce") or x:IsA("BodyGyro") or x:IsA("BodyPosition") or x:IsA("BodyThrust") or x:IsA("BodyVelocity") or x:IsA("RocketPropulsion") then
+                x:Destroy()
+            end
+        end
+        if v:FindFirstChild("Attachment") then
+            v:FindFirstChild("Attachment"):Destroy()
+        end
+        if v:FindFirstChild("AlignPosition") then
+            v:FindFirstChild("AlignPosition"):Destroy()
+        end
+        if v:FindFirstChild("Torque") then
+            v:FindFirstChild("Torque"):Destroy()
+        end
+        v.CanCollide = false
+        local Torque = Instance.new("Torque", v)
+        Torque.Torque = Vector3.new(100000, 100000, 100000)
+        local AlignPosition = Instance.new("AlignPosition", v)
+        local Attachment2 = Instance.new("Attachment", v)
+        Torque.Attachment0 = Attachment2
+        AlignPosition.MaxForce = 9999999999999999
+        AlignPosition.MaxVelocity = math.huge
+        AlignPosition.Responsiveness = 200
+        AlignPosition.Attachment0 = Attachment2
+        AlignPosition.Attachment1 = Attachment1
+    end
+end
+
+local blackHoleActive = true
+
+local function toggleBlackHole()
+    blackHoleActive = not blackHoleActive
+    if blackHoleActive then
+        for _, v in next, Workspace:GetDescendants() do
+            ForcePart(v)
+        end
+
+        Workspace.DescendantAdded:Connect(function(v)
+            if blackHoleActive then
+                ForcePart(v)
+            end
+        end)
+
+        spawn(function()
+            while blackHoleActive and RunService.RenderStepped:Wait() do
+                Attachment1.WorldCFrame = humanoidRootPart.CFrame
+            end
+        end)
+    end
+end
+
+local function createControlButton()
+    local screenGui = Instance.new("ScreenGui")
+    local button = Instance.new("TextButton")
+
+    screenGui.Name = "BlackHoleControlGUI"
+    screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+    button.Name = "ToggleBlackHoleButton"
+    button.Size = UDim2.new(0, 200, 0, 50)
+    button.Position = UDim2.new(0.5, -100, 0, 100)
+    button.Text = "Click here!!!"
+    button.Parent = screenGui
+
+    button.MouseButton1Click:Connect(function()
+        toggleBlackHole()
+        if blackHoleActive then
+            button.Text = "Unbring Unanchored Parts"
+        else
+            button.Text = "Bring Unanchored Parts"
+        end
+    end)
+end
+
+createControlButton()
+toggleBlackHole()
+end)
+Rizz_Main:Button("Be Super Small" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local barra = Instance.new("Part")
+barra.Size = Vector3.new(2, 0.2, 2)
+barra.Transparency = 1
+barra.CanCollide = false
+barra.Anchored = true
+barra.Parent = game.Workspace
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    barra.Position = character.HumanoidRootPart.Position - Vector3.new(0, humanoid.HipHeight + 0.1, 0)
+end)
+end)
+Rizz_Main:Button("Teleport Tool" , function()
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Teleport Tool"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+Rizz_Tab:Label("Zalgo Commands")
+
+Rizz_Tab:Button("666" , function()
+local args = {
+    [1] = "RolePlayName",
+    [2] = "6̲̊̍̉̊̈́̄̈́̀̃̿̎̂̇́̇̾6̍̀̑́͗̈̈̓̽̓̒̐̈͌͛̄́͌̽̀͒͑̇̚6̙̆̊͒̔̏͌̽̿́̌́̒̀͂"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingRPNameColor",
+    [2] = Color3.new(1, 0.24863016605377197, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eColo1r"):FireServer(unpack(args))
+end)
+Rizz_Tab:Button("Tubers93" , function()
+local args = {
+    [1] = "RolePlayName",
+    [2] = "t̜̑̓̒͆̊̏u͌b̆͗̋̒ě̐̾̾̏r̐̔͆̀͑́̈̔̇̉s̖͌͊̇̽̅̔͌̀͗̀͗9͔̰͈͎͙̥̝̭̣̄̀̿͌̊͒̚3͍̂̋̓̏̾̉̈̄̄"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingRPNameColor",
+    [2] = Color3.new(1, 0.24863016605377197, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eColo1r"):FireServer(unpack(args))
+end)
+Rizz_Tab:Button("Berkegamer6212" , function()
+local args = {
+    [1] = "RolePlayName",
+    [2] = "B̶er̵̛keg̶̢̕ǎ̴̧̅͡me҈̬̫͐̋̊̎̕͜r621҉̢̥͓̪͗̅́͡ͅ2"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingRPNameColor",
+    [2] = Color3.new(1, 0.24863016605377197, 0)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eColo1r"):FireServer(unpack(args))
+end)
+Rizz_Tab:Label("Admin Commands")
+
+Rizz_Tab:Button("Fart all Players" , function()
+local args = {
+    [1] = "RolePlayName",
+    [2] = ""
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
+local currentTarget = nil
+
+
+local function changeTarget()
+    local others = {}
+    
+    
+    for _, p in pairs(Players:GetPlayers()) do
+        if p ~= player then
+            table.insert(others, p)
+        end
+    end
+    
+    
+    if #others > 0 then
+        currentTarget = others[math.random(1, #others)]
+        camera.CameraSubject = currentTarget.Character:FindFirstChild("Humanoid")
+    end
+end
+
+
+Players.PlayerRemoving:Connect(function(leavingPlayer)
+    if leavingPlayer == currentTarget then
+        changeTarget()  
+    end
+end)
+
+
+player.CharacterAdded:Connect(function(character)
+    
+    camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+    currentTarget = nil  
+end)
+
+
+changeTarget()
+
+local args = {
+    [1] = "wear",
+    [2] = 132809431
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "wear",
+    [2] = 132809431
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "8551016315"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function teleportToPlayers()
+    for _, targetPlayer in pairs(game.Players:GetPlayers()) do
+        if targetPlayer ~= player then
+            local targetCharacter = targetPlayer.Character
+            if targetCharacter and targetCharacter:FindFirstChild("HumanoidRootPart") then
+                character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame)
+                wait(0.3) 
+            end
+        end
+    end
+end
+
+teleportToPlayers()
+
+
+
+
+
+
+
+
+
+
+
+
+local args = {
+    [1] = "OCA"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+if character then
+    character:BreakJoints()
+end
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6573930519"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+-- Defina as coordenadas desejadas
+local destino = Vector3.new(432.58, -76.65, 97.99)  -- Altere os valores conforme necessário
+
+-- Função para teletransportar o personagem
+local function teleportarPersonagem()
+    local jogador = game.Players.LocalPlayer  -- Obtém o jogador que está executando o script
+    
+    -- Verifica se o jogador está na partida
+    if jogador and jogador.Character then
+        local personagem = jogador.Character
+        local humanoide = personagem:FindFirstChild("Humanoid")
+        
+        if humanoide then
+            -- Teleporta o personagem para as coordenadas especificadas
+            personagem:SetPrimaryPartCFrame(CFrame.new(destino))
+        end
+    end
+end
+
+-- Chama a função de teleporte
+teleportarPersonagem()    
+end)
+Rizz_Tab:Label("HAX Commands")
+
+Rizz_Tab:Button("Bat Hit" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "7129073354"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Tab:Button("Meepcity 4" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "9032712619"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Tab:Button("Tubers93 Intro 1" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6018028320"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Tab:Button("Tubers93 Intro 2" , function()
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+
+
+
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "131057316"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+end)
+Rizz_Map:Label("Light Commands")
+
+Rizz_Map:Button("Light Source" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "FlashLight"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+
+local Camera = game.Workspace.CurrentCamera
+local Player = game.Players.LocalPlayer
+
+-- Defina a posição e rotação desejadas
+local posicaoCongelada = Vector3.new(-25.55, 10.95, -27.87)  -- Altere para a posição desejada
+local rotacaoCongelada = CFrame.Angles(0, math.rad(180), 0)  -- Altere para a rotação desejada
+
+-- Função para congelar a câmera
+local function congelarCamera()
+    Camera.CameraType = Enum.CameraType.Scriptable  -- Altera o tipo de câmera para scriptável
+    Camera.CFrame = CFrame.new(posicaoCongelada) * rotacaoCongelada  -- Define a posição e rotação fixas
+end
+
+-- Função para restaurar a câmera
+local function restaurarCamera()
+    Camera.CameraType = Enum.CameraType.Custom  -- Restaura o tipo de câmera padrão
+end
+
+-- Congela a câmera quando o script for executado
+congelarCamera()
+
+-- Restaura a câmera quando o jogador resetar
+Player.CharacterAdded:Connect(function(character)
+    -- Após o personagem ser adicionado, a câmera é restaurada
+    restaurarCamera()
+end)
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+local function equipInventoryItems()
+    
+    local backpack = player.Backpack
+
+    
+    for _, item in ipairs(backpack:GetChildren()) do
+        
+        if item:IsA("Tool") then
+            
+            item.Parent = character  
+        end
+    end
+end
+
+
+equipInventoryItems()
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+local targetPosition = Vector3.new(-26.48, 2.25, 14.48)  
+
+
+local function teleportCharacter()
+    
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        
+        character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+    end
+end
+
+
+teleportCharacter()
+
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 0.6
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+
+local rotationSpeed = 1000  
+
+
+local function spinCharacter()
+    while true do
+        humanoidRootPart.CFrame = humanoidRootPart.CFrame * CFrame.Angles(0, math.rad(rotationSpeed), 0)
+        wait(0.03)  
+    end
+end
+
+
+spinCharacter()
+local args = {
+    [1] = "PickingTools",
+    [2] = "FlashLight"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+local function equipInventoryItems()
+    
+    local backpack = player.Backpack
+
+    
+    for _, item in ipairs(backpack:GetChildren()) do
+        
+        if item:IsA("Tool") then
+            
+            item.Parent = character  
+        end
+    end
+end
+
+
+equipInventoryItems()
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+local targetPosition = Vector3.new(-26.48, 2.25, 14.48)  
+
+
+local function teleportCharacter()
+    
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        
+        character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+    end
+end
+
+
+teleportCharacter()
+
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 0.6
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+
+local rotationSpeed = 1000  
+
+
+local function spinCharacter()
+    while true do
+        humanoidRootPart.CFrame = humanoidRootPart.CFrame * CFrame.Angles(0, math.rad(rotationSpeed), 0)
+        wait(0.03)  
+    end
+end
+
+
+spinCharacter()
+end)
+Rizz_Map:Button("Light All Players" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "FlashLight"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+local function equipInventoryItems()
+    
+    local backpack = player.Backpack
+
+    
+    for _, item in ipairs(backpack:GetChildren()) do
+        
+        if item:IsA("Tool") then
+            
+            item.Parent = character  
+        end
+    end
+end
+
+
+equipInventoryItems()
+
+local args = {
+    [1] = "RolePlayName",
+    [2] = ""
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
+local currentTarget = nil
+
+
+local function changeTarget()
+    local others = {}
+    
+    
+    for _, p in pairs(Players:GetPlayers()) do
+        if p ~= player then
+            table.insert(others, p)
+        end
+    end
+    
+    
+    if #others > 0 then
+        currentTarget = others[math.random(1, #others)]
+        camera.CameraSubject = currentTarget.Character:FindFirstChild("Humanoid")
+    end
+end
+
+
+Players.PlayerRemoving:Connect(function(leavingPlayer)
+    if leavingPlayer == currentTarget then
+        changeTarget()  
+    end
+end)
+
+
+player.CharacterAdded:Connect(function(character)
+    
+    camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+    currentTarget = nil  
+end)
+
+
+changeTarget()
+
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "SkateBoard"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = ""
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function teleportToPlayers()
+    for _, targetPlayer in pairs(game.Players:GetPlayers()) do
+        if targetPlayer ~= player then
+            local targetCharacter = targetPlayer.Character
+            if targetCharacter and targetCharacter:FindFirstChild("HumanoidRootPart") then
+                character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame)
+                wait(0.4) 
+            end
+        end
+    end
+end
+
+teleportToPlayers()
+
+
+
+
+
+
+
+
+
+
+
+
+local args = {
+    [1] = "OCA"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+if character then
+    character:BreakJoints()
+end
+
+local args = {
+    [1] = "PickingScooterMusicText",
+    [2] = "6573930519"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1NoMoto1rVehicle1s"):FireServer(unpack(args))    
+
+local args = {
+    [1] = "ClearAllTools"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
+
+-- Defina as coordenadas desejadas
+local destino = Vector3.new(432.58, -76.65, 97.99)  -- Altere os valores conforme necessário
+
+-- Função para teletransportar o personagem
+local function teleportarPersonagem()
+    local jogador = game.Players.LocalPlayer  -- Obtém o jogador que está executando o script
+    
+    -- Verifica se o jogador está na partida
+    if jogador and jogador.Character then
+        local personagem = jogador.Character
+        local humanoide = personagem:FindFirstChild("Humanoid")
+        
+        if humanoide then
+            -- Teleporta o personagem para as coordenadas especificadas
+            personagem:SetPrimaryPartCFrame(CFrame.new(destino))
+        end
+    end
+end
+
+-- Chama a função de teleporte
+teleportarPersonagem()    
+end)
+Rizz_Map:Button("Stop Light (Source)" , function()
+local args = {
+    [1] = "CharacterSizeUp",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local args = {
+    [1] = "ClearAllTools"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
+
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-chosen-one-script-FE-16149"))()
+end)
+Rizz_Map:Label("Tools Commands")
+
+Rizz_Map:Button("Money" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Money"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Bow" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Bow"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Paperbag" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Paperbag"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Iphone" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Iphone"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Book" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Book"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Glock" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Glock"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("Bomb" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "Bomb"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Map:Button("FlashLight" , function()
+local args = {
+    [1] = "PickingTools",
+    [2] = "FlashLight"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+end)
+Rizz_Main:Button("Rejoin Server" , function()
+local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+
+
+ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+end)
+Rizz_Hello:Label("SS Tags")
+
+Rizz_Hello:Button("Developer Tag" , function()
+local args = {
+    [1] = "wear",
+    [2] = 18223761692
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Label("SS Hats")
+
+Rizz_Hello:Button("1 Eye Head" ,
+function()
+local args = {
+    [1] = "wear",
+    [2] = 18585499897
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Button("Sus Head" , 
+function()
+local args = {
+    [1] = "wear",
+    [2] = 6564572490
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Button("Block Head" , function()
+local args = {
+    [1] = "wear",
+    [2] = 12876444737
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Button("Doge Head" , function()
+local args = {
+    [1] = "wear",
+    [2] = 151784320
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Button("Smile1 Head" , function()
+local args = {
+    [1] = "wear",
+    [2] = 6711806832
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Button("Smile2 Head" , function()
+local args = {
+    [1] = "wear",
+    [2] = 6809319263
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+end)
+Rizz_Hello:Label("Others")
+
+Rizz_Hello:Button("Message All Players" , function()
+local args = {
+    [1] = "RolePlayName",
+    [2] = "HARKED!"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+-- Script de Voo sem GUI
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+local Flying = false
+local Speed = 50  -- Velocidade de voo
+local FlightHeight = 10  -- Altura do voo
+
+-- Função para ativar/desativar o voo
+local function toggleFlight()
+    if not Flying then
+        Flying = true
+        local BodyVelocity = Instance.new("BodyVelocity")
+        BodyVelocity.MaxForce = Vector3.new(100000, 100000, 100000)
+        BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+        BodyVelocity.Parent = Character:WaitForChild("HumanoidRootPart")
+
+        local BodyGyro = Instance.new("BodyGyro")
+        BodyGyro.MaxTorque = Vector3.new(400000, 400000, 400000)
+        BodyGyro.CFrame = Character.HumanoidRootPart.CFrame
+        BodyGyro.Parent = Character:WaitForChild("HumanoidRootPart")
+
+        -- Função de controle de voo
+        local userInputService = game:GetService("UserInputService")
+        local flyingDirection = Vector3.new(0, 0, 0)
+
+        userInputService.InputChanged:Connect(function(input)
+            if Flying then
+                if input.UserInputType == Enum.UserInputType.Keyboard then
+                    if input.KeyCode == Enum.KeyCode.W then
+                        flyingDirection = Vector3.new(0, 0, -Speed)
+                    elseif input.KeyCode == Enum.KeyCode.S then
+                        flyingDirection = Vector3.new(0, 0, Speed)
+                    elseif input.KeyCode == Enum.KeyCode.A then
+                        flyingDirection = Vector3.new(-Speed, 0, 0)
+                    elseif input.KeyCode == Enum.KeyCode.D then
+                        flyingDirection = Vector3.new(Speed, 0, 0)
+                    elseif input.KeyCode == Enum.KeyCode.Space then
+                        flyingDirection = Vector3.new(0, Speed, 0)
+                    elseif input.KeyCode == Enum.KeyCode.LeftControl then
+                        flyingDirection = Vector3.new(0, -Speed, 0)
+                    end
+                end
+                BodyVelocity.Velocity = flyingDirection
+                BodyGyro.CFrame = Character.HumanoidRootPart.CFrame
+            end
+        end)
+
+        -- Manter a altura
+        game:GetService("RunService").Heartbeat:Connect(function()
+            if Flying then
+                BodyVelocity.Velocity = flyingDirection
+                BodyGyro.CFrame = Character.HumanoidRootPart.CFrame
+            end
+        end)
+    end
+end
+
+-- Acionar o voo automaticamente
+toggleFlight()
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local camera = game.Workspace.CurrentCamera
+local currentTarget = nil
+
+
+local function changeTarget()
+    local others = {}
+    
+    
+    for _, p in pairs(Players:GetPlayers()) do
+        if p ~= player then
+            table.insert(others, p)
+        end
+    end
+    
+    
+    if #others > 0 then
+        currentTarget = others[math.random(1, #others)]
+        camera.CameraSubject = currentTarget.Character:FindFirstChild("Humanoid")
+    end
+end
+
+
+Players.PlayerRemoving:Connect(function(leavingPlayer)
+    if leavingPlayer == currentTarget then
+        changeTarget()  
+    end
+end)
+
+
+player.CharacterAdded:Connect(function(character)
+    
+    camera.CameraSubject = player.Character:FindFirstChild("Humanoid")
+    currentTarget = nil  
+end)
+
+
+changeTarget()
+
+local args = {
+    [1] = "CharacterSizeDown",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clothe1s"):FireServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function teleportToPlayers()
+    for _, targetPlayer in pairs(game.Players:GetPlayers()) do
+        if targetPlayer ~= player then
+            local targetCharacter = targetPlayer.Character
+            if targetCharacter and targetCharacter:FindFirstChild("HumanoidRootPart") then
+                character:SetPrimaryPartCFrame(targetCharacter.HumanoidRootPart.CFrame)
+                wait(0.4) 
+            end
+        end
+    end
+end
+
+teleportToPlayers()
+
+
+
+
+
+
+
+
+
+
+
+
+local args = {
+    [1] = "OCA"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+
+if character then
+    character:BreakJoints()
+end
+
+local args = {
+    [1] = "RolePlayName",
+    [2] = ""
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+   
+-- Defina as coordenadas desejadas
+local destino = Vector3.new(432.58, -76.65, 97.99)  -- Altere os valores conforme necessário
+
+-- Função para teletransportar o personagem
+local function teleportarPersonagem()
+    local jogador = game.Players.LocalPlayer  -- Obtém o jogador que está executando o script
+    
+    -- Verifica se o jogador está na partida
+    if jogador and jogador.Character then
+        local personagem = jogador.Character
+        local humanoide = personagem:FindFirstChild("Humanoid")
+        
+        if humanoide then
+            -- Teleporta o personagem para as coordenadas especificadas
+            personagem:SetPrimaryPartCFrame(CFrame.new(destino))
+        end
+    end
+end
+
+-- Chama a função de teleporte
+teleportarPersonagem()    
+end)
+
+wait(10)game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "Remember:",
+  Text = "This script is FE.",
+  Duration = 5
+})
+
+wait(10)game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "For executors:",
+  Text = "This script work in all executors.",
+  Duration = 5
+})
+
+wait(10)game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "FE Play Music, HAX and Admin",
+  Text = "Need gamepass for sounds",
+  Duration = 5
+  })
